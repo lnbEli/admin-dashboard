@@ -1,0 +1,93 @@
+body {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 4.5fr;
+  height: 100vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+.side-bar {
+  grid-column: 1;
+  grid-row: 1/3;
+  background-color: rgba(85, 147, 198, 0.847);
+  border: 1px solid black;
+  display: grid;
+  grid-template-rows: 0.5fr 1.5fr 3.5fr;
+  gap: 15px;
+  color: white;
+  font-family: "roboto", "Tangerine";
+  font-size: 1.2em;
+  /* Added this to stop Communities overflowing */
+  min-width: max-content;
+}
+.branding {
+  border: 1px solid black;
+  display: grid;
+  justify-content: start;
+  align-content: center;
+  padding-left: 10%;
+}
+.navigation {
+  border: 1px solid black;
+  padding-left: 15%;
+}
+.settings-info {
+  border: 1px solid black;
+  padding-left: 15%;
+}
+
+.side-bar li {
+  padding-top: 10px;
+}
+
+.header-bar {
+  grid-column: 2;
+  grid-row: 1;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid black;
+  display: grid;
+  grid-template: 1fr 1fr / 1fr 1fr;
+}
+.main-content {
+  grid-column: 2;
+  grid-row: 2;
+  background-color: rgba(223, 227, 223, 0.731);
+  border: 1px solid black;
+}
+
+.search-input-header,
+.welcome-user-header {
+  border: 1px solid;
+  justify-self: start;
+  align-self: center;
+}
+
+.usr-info-header,
+.btns-header {
+  border: 1px solid;
+  justify-self: end;
+  align-self: center;
+}
+
+.user-name-heading {
+  display: block;
+  font-size: 1.2em;
+  font-weight: 800;
+}
+
+#search {
+  background-color: aquamarine;
+  width: 500px;
+}
+
+div[class="usr-info-header"] > h3 {
+  display: inline;
+}
