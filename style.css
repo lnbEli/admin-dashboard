@@ -55,38 +55,49 @@ li {
   border: 1px solid rgb(206, 38, 38);
   display: grid;
   grid-template: 1fr 1fr / 2fr 1fr;
-  gap: 10px;
+  column-gap: 20px;
+  padding: 0 40px;
 }
 .main-content {
   grid-column: 2;
   grid-row: 2;
   background-color: rgba(223, 227, 223, 0.731);
   border: 1px solid black;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
 }
 
 .search-input-header,
 .welcome-user-header {
-  border: 1px solid red;
-  justify-self: start;
+  border: 1px solid rgb(42, 92, 220);
+  /* justify-self: end; */
   align-self: center;
-
-  /* Created for better visibility of grid borders */
-  min-width: 100%;
 }
 
 .usr-info-header,
 .btns-header {
   border: 1px solid red;
-  justify-self: end;
   align-self: center;
-  /* Created for better visibility of grid borders */
-  min-width: 100%;
+  /* Created for better visibility of grid borders but stops justify end working. can be solved with text align end*/
+  /* min-width: 100%; */
+  /* text-align: end; */
+}
+.usr-info-header {
+  justify-self: end;
+}
+
+.btns-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
 }
 
 .user-name-heading {
   display: block;
   font-size: 1.2em;
   font-weight: 800;
+  /* min-width: 50px; */
+  border: 1px solid red;
 }
 
 #search {
@@ -96,4 +107,48 @@ li {
 
 div[class="usr-info-header"] > h3 {
   display: inline;
+}
+
+.btn {
+  min-width: 50px;
+}
+
+.main-projects {
+  border: 1px solid green;
+  /* padding: 20px 0; */
+}
+
+.main-sidebar {
+  border: 1px solid rgb(214, 247, 23);
+  padding: 20px;
+}
+
+/* img + p {
+  display: inline;
+} */
+
+.trending-list > li {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  border: solid 1px black;
+}
+
+img {
+  width: 40px;
+  /* display: inline; */
+}
+
+.anouncement-list > li {
+  display: grid;
+  border: solid 1px black;
+}
+
+.trending,
+.anouncements {
+  padding: 10px 0px;
+}
+
+.trending > h2,
+.anouncements > h2 {
+  padding-bottom: 10px;
 }
