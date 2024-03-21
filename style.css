@@ -76,16 +76,8 @@ li {
   /* border: 1px solid black; */
   display: grid;
   grid-template-columns: 2fr 1fr;
-  /* border-top: #e79213 5px solid; */
-  /* box-shadow: 0 0px 10px 5px inset #e79213; */
-  border-top-width: 28px;
-  border-top-style: solid;
-  border-image: linear-gradient(
-      0deg,
-      rgb(248, 246, 248),
-      rgba(223, 227, 223, 0.731)
-    )
-    1;
+  /* top box shadow */
+  box-shadow: inset 0 6px 8px 2px #9e9d9d30;
 }
 
 .search-input-header {
@@ -144,7 +136,7 @@ li {
 }
 
 #search {
-  background-color: rgba(185, 194, 191, 0.865);
+  background-color: rgba(223, 227, 223, 0.731);
   min-width: 100%;
   border-radius: 10px;
   border: none;
@@ -261,35 +253,35 @@ div[class="user-name-heading"] {
 }
 
 .nav-home::before {
-  content: url(./home.svg);
+  content: url(./img/home.svg);
 }
 
 .nav-profile::before {
-  content: url(./profile.svg);
+  content: url(./img/profile.svg);
 }
 .nav-messages::before {
-  content: url(./message.svg);
+  content: url(./img/message.svg);
 }
 .nav-tasks::before {
-  content: url(./task.svg);
+  content: url(./img/task.svg);
 }
 .nav-commun::before {
-  content: url(./com.svg);
+  content: url(./img/com.svg);
 }
 .nav-hist::before {
-  content: url(./history.svg);
+  content: url(./img/history.svg);
 }
 
 .nav-setting::before {
-  content: url(./settings.svg);
+  content: url(./img/settings.svg);
 }
 
 .nav-support::before {
-  content: url(./support.svg);
+  content: url(./img/support.svg);
 }
 
 .nav-privacy::before {
-  content: url(./privacy.svg);
+  content: url(./img/privacy.svg);
 }
 
 .anouncement-list > li {
@@ -300,6 +292,7 @@ div[class="user-name-heading"] {
 .trending-list {
   background-color: rgb(209, 194, 175);
   border-radius: 8px;
+  box-shadow: 2px 6px 8px 2px #47464630;
 }
 .trending-list {
   padding-bottom: 30px;
@@ -322,11 +315,11 @@ div[class="user-name-heading"] {
 
 .projects-list {
   display: grid;
-  grid-template: 1fr 1fr 1fr/ 1fr 1fr;
+  /* grid-template: 1fr 1fr 1fr/ 1fr 1fr; */
   gap: 20px;
 
   /* padding: 20px; */
-  /* grid-template-columns: repeat(auto-fit, 350px); */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .projects-list > li {
@@ -334,6 +327,7 @@ div[class="user-name-heading"] {
   border-radius: 8px;
   padding: 30px;
   border-left: 8px solid #e79213;
+  box-shadow: 2px 6px 8px 2px #47464630;
 }
 
 .break-line {
@@ -343,7 +337,7 @@ div[class="user-name-heading"] {
   padding-top: 10px;
 }
 
-/* Content needs to be set to "" to create the line */
+/* Content needs to be set to "" to create the libox-shadow: 2px 6px 8px 2px #47464630;e */
 
 .break-line::after {
   content: "";
@@ -360,4 +354,10 @@ h3 + p {
 
 .heading-small-text {
   font-size: 12px;
+}
+
+.anouncement-list,
+.trending-list,
+.projects-list > li {
+  background-color: white;
 }
