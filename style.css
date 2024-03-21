@@ -202,7 +202,7 @@ img[class="projects-link-icon"] {
   padding: 10px;
 }
 
-img[class="projects-link-icon"]:hover {
+.projects-link-icon:hover {
   cursor: pointer;
 }
 
